@@ -1,0 +1,12 @@
+USE StockManagementDb;
+GO
+
+CREATE TABLE Categories
+(
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL,
+    Description NVARCHAR(500) NULL,
+    IsActive BIT NOT NULL DEFAULT 1,
+    CreatedDate DATETIME2 NOT NULL DEFAULT GETDATE()
+);
+GO
