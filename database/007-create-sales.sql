@@ -1,0 +1,12 @@
+USE StockManagementDb;
+GO
+
+CREATE TABLE Sales
+(
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    SaleDate DATETIME2 NOT NULL DEFAULT GETDATE(),
+    TotalAmount DECIMAL(18,2) NOT NULL,
+    Description NVARCHAR(500) NULL,
+    CreatedDate DATETIME2 NOT NULL DEFAULT GETDATE()
+);
+GO
