@@ -1,0 +1,15 @@
+USE StockManagementDb;
+GO
+
+CREATE TABLE Suppliers
+(
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(150) NOT NULL,
+    ContactName NVARCHAR(100) NULL,
+    Phone NVARCHAR(20) NULL,
+    Email NVARCHAR(150) NULL,
+    Address NVARCHAR(500) NULL,
+    IsActive BIT NOT NULL DEFAULT 1,
+    CreatedDate DATETIME2 NOT NULL DEFAULT GETDATE()
+);
+GO
